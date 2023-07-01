@@ -44,23 +44,23 @@ export default function LoginPage() {
     }, [user]);
 
     return (
-        <main className="bg-[#1E293B] min-h-screen min-w-full grid place-items-center">
-  <div className="bg-[rgba(255,_255,_255,_0.05)] w-80 h-fit rounded-2xl shadow-2xl grid-flow-row">
-    <div className="m-4 mt-0 box-border">
-      <h1 className="p-4 pl-0 text-[#28A0F1] text-center text-2xl">{loading ? "Processing" : "Login"}</h1>
-      <hr/>
-    </div>
-    <div className="m-4 p-4 box-border">
-      <label htmlFor="email"><h1 className="p-4 pl-0 text-[#28A0F1]">Email</h1></label>
-      <input className="p-2 h-8 w-full rounded-sm border-[2px] border-[#28A0F1] placeholder:opacity-50 focus:placeholder:opacity-100 outline-none"id="email"
+  <main className="bg-[#1E293B] min-h-screen min-w-full grid place-items-center">
+    <div className="bg-[rgba(255,_255,_255,_0.05)] w-80 h-fit rounded-2xl shadow-2xl grid-flow-row">
+      <div className="m-4 mt-0 box-border">
+        <h1 className="p-4 pl-0 text-[#28A0F1] text-center text-2xl">{loading ? "Processing" : "Login"}</h1>
+        <hr/>
+      </div>
+      <div className="m-4 p-4 box-border">
+        <label htmlFor="email"><h1 className="p-4 pl-0 text-[#28A0F1]">Email</h1></label>
+        <input className="p-2 h-8 w-full rounded-sm border-[2px] border-[#28A0F1] placeholder:opacity-50 focus:placeholder:opacity-100 outline-none" id="email"
             type="text"
             value={user.email}
             onChange={(e) => setUser({...user, email: e.target.value})}
             placeholder="Email"></input>
-    </div>
+      </div>
     <div className="m-4 mt-0 p-4 pt-0 box-border">
-    <label htmlFor="password"><h1 className="p-4 pl-0 text-[#28A0F1]">Password</h1></label>
-      <input className="p-2 h-8 w-full rounded-sm border-[2px] border-[#28A0F1] placeholder:opacity-50 focus:placeholder:opacity-100 outline-none"id="password"
+        <label htmlFor="password"><h1 className="p-4 pl-0 text-[#28A0F1]">Password</h1></label>
+        <input className="p-2 h-8 w-full rounded-sm border-[2px] border-[#28A0F1] placeholder:opacity-50 focus:placeholder:opacity-100 outline-none" id="password"
             type="password"
             value={user.password}
             onChange={(e) => setUser({...user, password: e.target.value})}
